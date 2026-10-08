@@ -1,0 +1,33 @@
+# General
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Backend (Python)
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/ffmpeg.exe
+backend/ffprobe.exe
+backend/static/videos/*
+backend/static/frames/*
+backend/static/audio/*
+backend/static/reports/*
+!backend/static/videos/.gitkeep
+!backend/static/frames/.gitkeep
+!backend/static/audio/.gitkeep
+!backend/static/reports/.gitkeep
+backend/static/history.json
+backend/*.webm
+backend/*.mp4
+
+# Ffmpeg extracted files
+ffmpeg_extracted/
+
+# Frontend (Node.js) - mostly covered by frontend/.gitignore, but just in case
+frontend/node_modules/
+frontend/dist/
