@@ -9,6 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
+  const isLandingPage = location.pathname === '/';
   
   const bottomNavItems = [
     { name: 'Home', path: '/', icon: <Home size={20} /> },
@@ -16,6 +17,14 @@ const Layout = ({ children }: LayoutProps) => {
     { name: 'History', path: '/history', icon: <History size={20} /> },
     { name: 'Reports', path: '/reports', icon: <FileText size={20} /> },
   ];
+
+  if (isLandingPage) {
+    return (
+      <div className="min-h-screen bg-[#FEFAE0] text-[#283618] relative selection:bg-[#606C38] selection:text-[#FEFAE0]">
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen bg-transparent relative">

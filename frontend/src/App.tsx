@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Analyze from './pages/Analyze';
 import Results from './pages/Results';
 import History from './pages/History';
+import Reports from './pages/Reports';
 import Methodology from './pages/Methodology';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/analyze" element={<Analyze />} />
           <Route path="/results/:id" element={<Results />} />
           <Route path="/history" element={<History />} />
+          <Route path="/reports" element={<Reports />} />
           <Route path="/methodology" element={<Methodology />} />
         </Routes>
       </Layout>
